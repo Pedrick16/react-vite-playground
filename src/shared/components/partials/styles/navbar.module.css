@@ -1,0 +1,39 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: black;
+    padding-right: 5px;
+    padding-left: 15px;
+
+   
+}
+
+.logo{
+    color: white;
+   
+}
+
+.menu_container{
+    display: flex;
+    flex-direction: row;
+
+  
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    margin-right: 20px;
+}
+
+
+
+
+
+
