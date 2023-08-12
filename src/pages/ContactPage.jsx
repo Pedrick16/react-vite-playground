@@ -30,7 +30,7 @@ function ContactPage() {
   }
 
   return (
-    <div >
+    <>
       {todos.length > 0 ? (
          <table className="table table-dark table-hover text-center">
          <thead>
@@ -55,12 +55,16 @@ function ContactPage() {
        </table>
 
       ): (
+
+        
+        <div className="d-flex align-items-center justify-content-center">
+        <h4 >Loading....</h4>
+        </div>
       
-        <h4>Loading....</h4>
     
       )}
      
-    </div>
+    </>
   );
 }
 

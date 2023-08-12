@@ -11,7 +11,9 @@ function Navbar() {
             <div className={style["menu_container"]}>
               <Link to="/" className={style.link}>Home</Link>
               <Link to="/about" className={style.link}>About</Link>
-              <Link to="contact" className={style.link}>Contact</Link>
+              <Link to="/contact" className={style.link}>Contact</Link>
+              <Link to="/reducer" className={style.link}>Reducer</Link>
+              <Link to="/todo" className={style.link}>Todo</Link>
             </div>
             <div>
               <button className="btn btn-danger">Login</button>

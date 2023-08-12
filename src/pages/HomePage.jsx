@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useReducer, useState } from 'react'
 import HomeComponents from '../components/HomeComponents'
-import ChildComponents from '../components/ChildComponents'
 import LikeComponents from '../components/LikeComponents'
 
-const homePage = () => {
-  const [count, setCount] = useState(0)
 
+
+
+
+
+const homePage = () => {
+
+  const [count, setCount] = useState(0)
+ 
   const handleIncrement = () => {
     setCount((prevState) => prevState + 1 )
   }
@@ -16,16 +21,23 @@ const homePage = () => {
 
 
 
+
+
   return (
-    <>
+
+    <div className='container'>
+   
     <HomeComponents count={count} handleIncrement={handleIncrement} handleDecrement={handleDecrement} />
-    
-    <div className=' text-center'>
-    <LikeComponents   />
-    </div>
 
     
-    </>
+    <div className='text-center'>
+    <LikeComponents   />
+    </div>
+    
+    
+
+    
+    </div>
   )
 }
 
