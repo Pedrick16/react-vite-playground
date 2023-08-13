@@ -13,12 +13,21 @@ const homePage = () => {
  
   const handleIncrement = () => {
     setCount((prevState) => prevState + 1 )
+    localStorage.setItem('count', JSON.stringify(count + 1));
   }
 
   const handleDecrement = () => {
     setCount((prevState) => prevState - 1 )
+    localStorage.setItem('count', JSON.stringify(count - 1));
   }
 
+
+  React.useEffect(() => {
+    const storedCount = localStorage.getItem('count');
+    if (storedCount) {
+      setCount(JSON.parse(storedCount));
+    }
+  }, []);
 
 
 

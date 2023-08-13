@@ -19,6 +19,7 @@ const TodoPage = () => {
             setTaskList([...tasks, todo])
             setTodo('')
             setDisabled(true)
+            localStorage.setItem('tasks', JSON.stringify([...tasks, todo]));
         }else{
             setError('input must have value')
         }
@@ -34,6 +35,16 @@ const TodoPage = () => {
         
        setDisabled(false)
     } 
+
+    React.useEffect(() => {
+        const storedTasks = localStorage.getItem('tasks');
+        if (storedTasks) {
+            setTaskList(JSON.parse(storedTasks));
+        }
+      }, []);
+    
+
+
 
 
   return (
